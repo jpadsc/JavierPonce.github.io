@@ -1,5 +1,4 @@
-<h1 id="page-title" class="page__title">Javier Ponce</h1>
+<h1 id="page-title" class="page__title">About me</h1>
 
-## About me
 ## My Projects
 ## My interests
