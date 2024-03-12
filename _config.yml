@@ -9,3 +9,6 @@ subtitle                 : "My Personal Website"
 plugins:
   - jekyll-include-cache
   - jekyll-titles-from-headings
+
+header:
+  image: assets/images/Geisel-5-L.jpg
