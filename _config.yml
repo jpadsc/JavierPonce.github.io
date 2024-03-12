@@ -5,10 +5,13 @@ minimal_mistakes_skin    : "default"
 locale                   : "en-US"
 title                    : "Javier Ponce"
 subtitle                 : "My Personal Website"
+repository: "jpadsc/JavierPonce.github.io"
+
+header:
+  teaser: /assets/images/Geisel-5-L.jpg
+
+breadcrumbs: true
 
 plugins:
   - jekyll-include-cache
   - jekyll-titles-from-headings
-
-header:
-  image: assets/images/Geisel-5-L.jpg
