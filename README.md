@@ -1,7 +1,3 @@
----
-header:
-  image: assets/images/Geisel-5-L.jpg
----
 <h1 id="page-title" class="page__title">About me</h1>
 
 ## My Projects
