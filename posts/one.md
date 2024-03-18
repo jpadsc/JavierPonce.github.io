@@ -1,3 +1,4 @@
-# About Me
-## My Projects
-## My interests
+--- yaml
+layout: home
+author_profile: true
+---
