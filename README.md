@@ -1,3 +1,2 @@
-# About Me
-## My Projects
-## My interests
+# Hello!
+## This is the github repositry of my website.
