@@ -23,7 +23,7 @@ description              : "Personal website/blog"
 url                      : "https://jpadsc.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/JavierPonce.github.io/" # the subpath of your site, e.g. "/blog"
 repository               : "jpadsc/JavierPonce.github.io"
-teaser                   : /assets/images/Geisel-5-L.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+#teaser                   : /assets/images/Geisel-5-L.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 185
@@ -263,12 +263,6 @@ defaults:
   - scope:
       path: ""
       type: foo
-    values:
-      layout: single
-  # _pages
-  - scope:
-      path: ""
-      type: pages
     values:
       layout: single
   #_posts
