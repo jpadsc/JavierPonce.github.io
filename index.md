@@ -1,6 +1,8 @@
 ---
 layout: home
 author_profile: true
+header:
+	image: \assets\images\beach.jpg
 title: About this website
 ---
 
