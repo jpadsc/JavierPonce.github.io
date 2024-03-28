@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "Javier Ponce"
-  avatar           : /assets/images/WEBSITE_PICTURE.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/WEBSITE_PICTURE.jpeg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : " "
   location         : "San Diego, CA"
   email            : "j2ponce@ucsd.edu"
