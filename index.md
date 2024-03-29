@@ -2,8 +2,8 @@
 layout: home
 author_profile: true
 header:
-  image: /assets/images/HDSI-Mural_5.png
-  image_description: "UCSD"
+  image: /assets/images/beach.jpg
+  image_description: "beach"
 title: About this website
 ---
 
