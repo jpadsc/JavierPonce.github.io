@@ -2,7 +2,7 @@
 layout: home
 author_profile: true
 header:
-  image: /assets/images/beach.jpg
+  image: /assets/images/beach.jpeg
   image_description: "beach"
 title: About this website
 ---
