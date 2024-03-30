@@ -2,7 +2,7 @@
 layout: home
 author_profile: true
 header:
-  image: /assets/images/beach.jpeg
+  image: /assets/images/sandiegocopy.jpeg
   image_description: "san diego"
 title: About this website
 ---
