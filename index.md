@@ -2,8 +2,8 @@
 layout: home
 author_profile: true
 header:
-  image: /assets/images/beach.jpeg
-  image_description: "beach"
+  image: /assets/images/sandiego.jpg
+  image_description: "san diego"
 title: About this website
 ---
 
