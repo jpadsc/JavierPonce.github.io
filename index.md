@@ -17,4 +17,8 @@ While I enjoy learning about abstract Mathematics, my creative mind impels me to
 
 ## My work experience
 
-I believe that ideally any job you take should meet two conditions, you should enjoy your job and second
+Currently, I have two jobs. I work for the Halıcıoğlu Data Science Institute as a Data Science tutor and for the Academic Achievement Hub as a Content tutor. I am fortunate enough to say that I enjoy both jobs and that both positions allowed me to improve my professional and personal skills in different ways.
+
+### Data Science tutor 
+
+### Content tutor
