@@ -21,4 +21,6 @@ Currently, I have two jobs. I work for the Halıcıoğlu Data Science Institute 
 
 ### Data Science tutor 
 
+As a Data Science tutor, I work with a group of 8 to 10 other tutors and a falcuty processor to support the undegraduate students taking lower division courses from the Data Science department at the University of California San Diego. Each lower division Data Science course has an assigned group of tutors chosed by the proffesor assigned to the class the given quarter, this means that every tutor has to reapply to the job each quarter. In the last three quarters, I applied to the position and got accepted and assigned to tutor for the "Theoretical Foundations of Data Science" course, this is a course that covers the Mathematical foundations behind some Data Science ideas such as Clustering, Machine Learning, Regression, etc.   
+
 ### Content tutor
