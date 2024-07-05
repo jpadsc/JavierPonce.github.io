@@ -11,7 +11,7 @@ Hello! As you probably already figured out, My name is Javier Ponce, and I made 
 
 # About Me
 
-I consider myself a creative, passionate, and curious mind fascinated by Mathematics and how to understand random processes with mathematical modeling. I am pursuing my passion for Mathematics at the University of California San Diego, where I am working towards completing a degree with a Probability and Statistics major, an Economics major, and a Data Science minor. 
+I consider myself a creative, passionate, and curious mind fascinated by Mathematics and how to understand random processes. I am pursuing my passion for Mathematics at the University of California San Diego, where I am working towards completing a degree with a Probability and Statistics major, an Economics major, and a Data Science minor. 
 
 While I enjoy learning about abstract Mathematics, my creative mind impels me to merge what I observe with the mathematical principles I know. The other day, after spending a lot of time with my dog Leia, I noticed that she has four moods: resting, eating, playing, and going outside (equivalent to going to the restroom). Since I wish to predict when Leia might want to go outside, I wondered if I could define a <a href="https://en.wikipedia.org/wiki/Continuous_stochastic_process" target="_blank"> continous-time stochastic process</a> that accurately describes Leia's behavior and use it to predict if Leia wants to go outside at any given time of the day. Hopefully, you can see that I enjoy formulating and solving questions that merge my reality with Mathematics, which pushes me to use my education and experience to seek a living out of it. 
 
@@ -38,3 +38,13 @@ Tutoring Mathematics helped me draw the connections between all the courses I tu
 ## My personal interests
 
 Although I have a strong passion for Mathematics and Data Science, I have multiple passions outside of the spectrum of my academic or professional careers, and I wouldn't be myself without them. I am a person who enjoys activities that push me to think deeply while also challenging my creativity by constantly provoking me to generate new ideas, which is why music, strategy games, and cooking are some of the most important things for my identity.
+
+### Music
+
+I first discovered my love for music when I was eight during my piano lessons. Since then, I've learned to play six different instruments, but the piano remains my favorite and most advanced instrument. While I love playing instruments and performing, I am more passionate about composition and improvisation because they appeal to my creative mind. Whenever I'm writing music, I focus on the emotion or idea I want to evoke for the listener and how to reflect that in my choices of instruments, chords, melody, etc. Having that focus in mind, I can spend hours on a single bar of music, and it feels liberating going over all the different decisions you can take until you find the one that fits your song. While I've written multiple songs, I've never published my music anywhere. Whenever I write music, I do it only for the enjoyment I get from writing or because I'm feeling a strong emotion that I want to move to my music, and because of the latter reason, writing music became a way to get to know myself better and to improve my emotional intelligence, which is one of the reasons why music is so important for my identity. 
+
+### Strategy Games
+
+### Cooking
+
+<!-- I am a thinker, I enjoy engaging in deep conversations with my mind but because of this I sometimes find myself drifting away from the present which is not always a good thing. Cooking stegnthens my ability to think while being aware of the present, this is because when you are cooking every second counts and you cannot take the time to think of the perfect way to do something instead sometimes is more important to act fast than think and act efficient. for example if you are like me and like your steak to be medium-rare/medium drifting away while cooking its dangerous because you can end up with a well-done steak. -->
