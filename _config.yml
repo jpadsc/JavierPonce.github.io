@@ -108,9 +108,9 @@ author:
   location         : "San Diego, CA"
   email            : "j2ponce@ucsd.edu"
   links:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/profile.php?id=100009120511992"
+    - label: "LinkedIn"
+      icon: "fab fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/javier-ponce-stats-n-math/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jpadsc"
@@ -121,9 +121,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/profile.php?id=100009120511992"
+    - label: "LinkedIn"
+      icon: "fab fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/javier-ponce-stats-n-math/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jpadsc"
