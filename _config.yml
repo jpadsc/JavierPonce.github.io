@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Javier Ponce"
 subtitle                 : "My Personal Website"
-name                     : "Your Name"
+name                     : "Javier Ponce"
 description              : "Personal website/blog"
 url                      : "https://jpadsc.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/JavierPonce.github.io/" # the subpath of your site, e.g. "/blog"
@@ -27,6 +27,7 @@ repository               : "jpadsc/JavierPonce.github.io"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 185
+enable_copy_code_button  : true
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
