@@ -1,7 +1,7 @@
 ---
-layout: single
 toc: true
 title: Experience
+permalink: /experience/
 ---
 
 # Coming soon
