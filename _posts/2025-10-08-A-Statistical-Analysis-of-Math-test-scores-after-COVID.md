@@ -1,1 +1,5 @@
-# Did COVID make students attempting to go to college worse at math?
+## Did COVID make students attempting to go to college worse at math?
+
+As a student who experienced the online classes era during COVID, I believe that online schooling significantly decreased learning among all students, especially in abstract subjects like mathematics. Similarly, during my years as a Mathematics and Data Science tutor at UCSD, I found that many students struggled due to a lack of understanding of fundamental concepts they had studied during the COVID pandemic. 
+
+Ideally, when you want to test a causal effect like the one I described in the above paragraph, you would seek data that allows you to hold all variables constant while changing the variable that causes the effect. Finding such data would require students who were and weren’t affected by the COVID pandemic at the same time, which is impossible without access to a parallel reality where COVID didn’t happen. Instead, we can compare how students performed during math tests before and after the pandemic. If we don’t find any statistically significant change in performance, then it doesn’t make sense to hold a belief that is not somehow reflected in our reality. 
