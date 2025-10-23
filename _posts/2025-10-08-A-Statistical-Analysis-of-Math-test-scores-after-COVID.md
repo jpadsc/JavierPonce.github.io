@@ -6,4 +6,6 @@ Ideally, when you want to test a causal effect like the one I described in the a
 
 ## The parameters of interest and the Data.
 
-Before running any tests, let me define the parameters of interest and explain how we can use the data from the yearly SAT reports to test the defined parameters. I’ll define $\mu_x$ to be the true average score of every student attempting to go to college in the school cycle $x$. 
+Before running any tests, let me define the parameters of interest and explain how we can use the data from the yearly SAT reports to test the defined parameters. I’ll define $\mu_x$ to be the average math SAT score obtained by students planning to attend college during the school cycle $x$ in the hypothetical case where all of them took the test. For simplicity, let each school cycle be represented by the latter year of each cycle, meaning that $\mu_{2025}$ represents the true average score of all students planning to apply to college in the 2025-2024 cycle if we were to test all of these students. Under these definitions, we are interested in testing the hypothesis that  $\mu_x < \mu_y$, where $x$ represents a school cycle after the COVID lockdown and $y$ the one before it. 
+
+Since not all students planning to attend college in each school cycle take the SAT, the data from the SAT yearly reports is from a sample of our population of interest.
