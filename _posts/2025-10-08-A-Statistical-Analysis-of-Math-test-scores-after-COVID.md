@@ -29,6 +29,10 @@ This argument is especially strong for the pre-COVID pandemic era, when most uni
 
 Hopefully, my arguments help you understand why I think it is reasonable to take all the data as if it were randomly sampled. I understand that I am making a lot of assumptions here, and I would like to hear your thoughts about this section in the comments (assuming I implemented comments by the time I publish this page). That said, for the remainder of this analysis, I will treat the samples as if they were random in order to run statistical tests.
 
+### Is that normal?
+
+In order to run tests, you also need to have information about the type of distribution your data is coming from. Ideally, if you have access to all the data, you can use the data to infer the distribution of the data. For example, if I wanted to show the distribution is approximately normal, I would create a Q-Q plot or use the Kolmogorov-Smirnov test. Unfortunately, I don’t have access to the complete sample, but only the reported summary. Thankfully, it is a popular assumption to consider SAT scores to be approximately normal, so for the rest of this analysis, I’ll assume that the samples come from a normal distribution with unknown parameters $\mu$ and $\sigma$.  
+
 ### Table summary of the data.
 
 | School Cycle | Mean | Standard deviation | # of participants |
@@ -37,4 +41,8 @@ Hopefully, my arguments help you understand why I think it is reasonable to take
 |2024-2023     |505   | 125                | 1,973,891         |
 |2023-2022     |508   | 122                | 1,913,742         |
 |2020-2019     |523   | 117                | 2,198,460         |
+
+
+## Time to test the test.
+
 
