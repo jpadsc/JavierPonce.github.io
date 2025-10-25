@@ -27,6 +27,14 @@ $B_1$ and $C$ should be known to the student even before they decide to take the
 
 This argument is especially strong for the pre-COVID pandemic era, when most universities required SAT scores for the application process. Unfortunately, many universities stopped considering SAT scores during the COVID-19 pandemic, which lowers the $B_1$ value. While schools have shifted back to requiring/requesting test scores in recent years, I believe it is a reasonable assumption that $ B_1$’s are still lower than before COVID. This leaves us with two scenarios: either the post-COVID $B_1$’s are high enough to believe that the sample is random under my original argument, or the post-COVID $B_1$’s are not high enough for my argument, and we can’t assume randomness. In the latter case, the pre-COVID sample can be thought of as random, but  the post-COVID sample is biased towards having a bigger mean than the population. Even if we were to run a test on this biased data, because our hypothesis was that $\mu_x < \mu_y$, where $x$ represents a school cycle after the COVID lockdown and $y$ the one before it. Then, rejecting the null of $\mu_x = \mu_y$ with such bias would mean that our test is even more significant after removing the bias. Intuitively, because the specified bias makes it harder for us to reject the null, if we somehow manage to reject it anyway, the test becomes even more significant. 
 
-Hopefully, my arguments help you understand why I think it is reasonable to take all the data as if it were randomly sampled. I understand that I am making a lot of assumptions here, and I would like to hear your thoughts about this section in the comments (assuming I implemented comments by the time I publish this page).That said, for the remainder of this analysis, I will treat the samples as if they were random in order to run statistical tests.
+Hopefully, my arguments help you understand why I think it is reasonable to take all the data as if it were randomly sampled. I understand that I am making a lot of assumptions here, and I would like to hear your thoughts about this section in the comments (assuming I implemented comments by the time I publish this page). That said, for the remainder of this analysis, I will treat the samples as if they were random in order to run statistical tests.
 
+### Table summary of the data.
+
+| School Cycle | Mean | Standard deviation | # of participants |
+|--------------|------|--------------------|-------------------|
+|2025-2024     |508   | 126                | 2,004,965         |
+|2024-2023     |505   | 125                | 1,973,891         |
+|2023-2022     |508   | 122                | 1,913,742         |
+|2020-2019     |523   | 117                | 2,198,460         |
 
