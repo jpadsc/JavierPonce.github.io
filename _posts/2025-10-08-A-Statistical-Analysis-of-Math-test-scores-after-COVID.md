@@ -72,5 +72,6 @@ equal_var_test <- function(S_x, n, S_y, m, alpha){
 
 #### Testing $\sigma_{2025} \neq \sigma_{2020}$
 
-$$H_0 : \sigma_{2025} = \sigma_{2020} ; H_1: \sigma_{2025} \neq \sigma_{2020}$$
+$$H_0 : \sigma_{2025} = \sigma_{2020} \quad ; \quad H_1: \sigma_{2025} \neq \sigma_{2020}$$
 
+$$ f = \frac{S_{2020}^2}{S_{2025}^2} \sim F_{2198459,2004964}$$
