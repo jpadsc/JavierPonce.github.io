@@ -163,7 +163,9 @@ lower_mean_t_test <- function(X_bar, n, S_x, Y_bar, m, S_y, alpha){
 
 $$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$.
 
-Under the null $H_0$, and using Welch's approximation $ t = \frac{\bar{X}_{2025} - \bar{X}_{2020} }{\sqrt{ \frac{S_{2025}^2}{2004965} + \frac{S_{2020}^2}{2198460} }} \sim T_v $.
+Under the null $H_0$, and using Welch's approximation 
+
+$$ t = \frac{\bar{X}_{2025} - \bar{X}_{2020} }{\sqrt{ \frac{S_{2025}^2}{2004965} + \frac{S_{2020}^2}{2198460} }} \sim T_v $$.
 
 Where using $ \theta = \frac{S_{2025}^2}{S_{2020}^2} $, $ v = \frac{(\theta + \frac{2004965}{2198460})^2}{\frac{\theta^2}{2004964} + \frac{2004965^2}{2198460^2 (2198459)}} $.
 
