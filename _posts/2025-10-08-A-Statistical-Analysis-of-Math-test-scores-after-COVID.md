@@ -165,7 +165,7 @@ $$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$.
 
 Under the null $H_0$, and using Welch's approximation 
 
-$$ t = \frac{\bar{X}_{2025} - \bar{X}_{2020} }{\sqrt{ \frac{S_{2025}^2}{2004965} + \frac{S_{2020}^2}{2198460} }} \sim T_v $$.
+$$ t = \frac{ \bar{X}_{2025} - \bar{X}_{2020} }{\sqrt{ \frac{S_{2025}^2}{2004965} + \frac{S_{2020}^2}{2198460} }} \sim T_v $$.
 
 Where using $ \theta = \frac{S_{2025}^2}{S_{2020}^2} $, $ v = \frac{(\theta + \frac{2004965}{2198460})^2}{\frac{\theta^2}{2004964} + \frac{2004965^2}{2198460^2 (2198459)}} $.
 
@@ -183,3 +183,53 @@ lower_mean_t_test(avg_2025,n_2025,S_2025, avg_2020,n_2020,S_2020, 0.05)
 t_stat: -126.1218 , v: 4090955 , cutoff -1.644854 , pvalue: 0 
 [1] "reject the null, mean x is significantlly smaller than mean y"
 ```
+#### Testing $\mu_{2024} < \mu_{2020}$.
+
+$$ H_0 : \mu_{2024} = \mu_{2020} \quad ; \quad H_1 : \mu_{2024} < \mu_{2020} $$.
+
+Under the null $H_0$, and using Welch's approximation 
+
+$$ t = \frac{ \bar{X}_{2024} - \bar{X}_{2020} }{\sqrt{ \frac{S_{2024}^2}{1973891} + \frac{S_{2020}^2}{2198460} }} \sim T_v $$.
+
+Where using $ \theta = \frac{S_{2024}^2}{S_{2020}^2} $, $ v = \frac{(\theta + \frac{1973891}{2198460})^2}{\frac{\theta^2}{1973890} + \frac{1973891^2}{2198460^2 (2198459)}} $.
+
+Therefore, we reject the null at the significance level $\alpha = 0.05$ if $t \leq T_{\alpha,v}$.
+
+Using my function and the values from the report, we get that
+
+$$ t = -151.3596, v = 4050399 ; t < T_{0.05,v} = -1.644854 $$ 
+
+Thus, the tests rejects the null, meaning that the sample from the school cycle 2024-2023 has significantly lower math scores on average than the one from 2020-2019 (pre-COVID).
+
+Function's output:
+```
+> lower_mean_t_test(avg_2024,n_2024,S_2024, avg_2020,n_2020,S_2020, 0.05)
+t_stat: -151.3596 , v: 4050399 , cutoff -1.644854 , pvalue: 0 
+[1] "reject the null, mean x is significantlly smaller than mean y"
+```
+
+#### Testing $\mu_{2023} < \mu_{2020}$.
+
+$$ H_0 : \mu_{2023} = \mu_{2020} \quad ; \quad H_1 : \mu_{2023} < \mu_{2020} $$.
+
+Under the null $H_0$, and using Welch's approximation 
+
+$$ t = \frac{ \bar{X}_{2023} - \bar{X}_{2020} }{\sqrt{ \frac{S_{2023}^2}{1913742} + \frac{S_{2020}^2}{2198460} }} \sim T_v $$.
+
+Where using $ \theta = \frac{S_{2023}^2}{S_{2020}^2} $, $ v = \frac{(\theta + \frac{1913742}{2198460})^2}{\frac{\theta^2}{1913741} + \frac{1913742^2}{2198460^2 (2198459)}} $.
+
+Therefore, we reject the null at the significance level $\alpha = 0.05$ if $t \leq T_{\alpha,v}$.
+
+Using my function and the values from the report, we get that
+
+$$ t = -126.7547, v = 3982576 ; t < T_{0.05,v} = -1.644854 $$ 
+
+Thus, the tests rejects the null, meaning that the sample from the school cycle 2023-2022 has significantly lower math scores on average than the one from 2020-2019 (pre-COVID).
+
+Function's output:
+```
+> lower_mean_t_test(avg_2023,n_2023,S_2023, avg_2020,n_2020,S_2020, 0.05)
+t_stat: -126.7547 , v: 3982576 , cutoff -1.644854 , pvalue: 0 
+[1] "reject the null, mean x is significantlly smaller than mean y"
+```
+
