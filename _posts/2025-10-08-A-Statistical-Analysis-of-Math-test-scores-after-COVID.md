@@ -80,6 +80,35 @@ Where $S_x$ represents the unbiased estimator of the standart deviation for cycl
 
 Using the values from the SAT report and the table above we get
 
-$$ f = 0.8622449 < F_{0.025,2198459,2004964} < F_{0.975,2198459,2004964} $$
+$$ f = 0.8622449 < F_{0.025,2198459,2004964} = 0.9980453 < F_{0.975,2198459,2004964} = 1.00196 $$
 
 Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
+
+#### Testing $\sigma_{2024} \neq \sigma_{2020}$
+
+$$H_0 : \sigma_{2024} = \sigma_{2020} \quad ; \quad H_1: \sigma_{2024} \neq \sigma_{2020}$$
+
+$$ f = \frac{S_{2020}^2}{S_{2024}^2} \sim F_{2198459,1973890}$$
+
+Using the values from the SAT report we get
+
+$$ f = 0.876096 < F_{0.025,2198459,1973890} = 0.99803 < F_{0.975,2198459,1973890} = 1.001976 $$
+
+Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
+
+#### Testing $\sigma_{2023} \neq \sigma_{2020}$
+
+$$H_0 : \sigma_{2023} = \sigma_{2020} \quad ; \quad H_1: \sigma_{2023} \neq \sigma_{2020}$$
+
+$$ f = \frac{S_{2020}^2}{S_{2023}^2} \sim F_{2198459,1913741}$$
+
+Using the values from the SAT report we get
+
+$$ f = 0.9197124 < F_{0.025,2198459,1913741} = 0.9979994 < F_{0.975,2198459,1913741} = 1.002007 $$
+
+Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
+
+#### Conclusion of the tests.
+
+According to the F tests, none of the pairs share variance. Thus, I will use Welch’s approximation to run the two-population mean t-tests.
+
