@@ -171,9 +171,9 @@ $$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$
 
 Under the null $H_0$
 
-$$ t = \faq{\bar{X}_2025 - \bar{X}_2020}{\sqrt{\frac{{S^2}_2025}{2004965} + \frac{{S^2}_2020}{2198460}}} \sim T_v $$
+$$ t = \fraq{\bar{X}_2025 - \bar{X}_2020}{\sqrt{\frac{{S^2}_2025}{2004965} + \frac{{S^2}_2020}{2198460}}} \sim T_v $$
 
-where using $ \theta = \fraq{{S^2}_2025}{{S^2}_2020}$
+where using $ \theta = \fraq{{S^2}_2025}{{S^2}_2020}$  v is
 
 $$ v = \fraq{(\theta + \fraq{2004965}{2198460})^2}{\fraq{\theta^2}{2004964} + \fraq{2004965^2}{2198460^2 (2198459)}} $$.
 
@@ -181,4 +181,13 @@ Therefore, we reject the null at the significance level $\alpha = 0.05$ if $t \l
 
 Using my function and the values from the report, we get that
 
-$$ t = -126.1218, v = 4090955 ; t < T_{0.05,v} = -1.644854 $$
+$$ t = -126.1218, v = 4090955 ; t < T_{0.05,v} = -1.644854 $$ 
+
+Thus, the tests rejects the null, meaning that the sample from the school cycle 2025-2024 has significantly lower math scores on average than the one from 2020-2019 (pre-COVID).
+
+Function's output:
+```
+lower_mean_t_test(avg_2025,n_2025,S_2025, avg_2020,n_2020,S_2020, 0.05)
+t_stat: -126.1218 , v: 4090955 , cutoff -1.644854 , pvalue: 0 
+[1] "reject the null, mean x is significantlly smaller than mean y"
+```

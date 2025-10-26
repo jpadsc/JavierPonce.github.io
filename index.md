@@ -7,7 +7,7 @@ header:
 title: About this website
 ---
 
-Hello! As you probably already figured out, My name is Javier Ponce, and I made this website for anyone interested in learning more about who I am, how I think, what I've done and like to do. Hopefully, you are reading this because you are a prospective friend or an interested Employer, and ideally, you are both.
+Hello! As you probably already figured out, My name is Javier Ponce, and I made this website for anyone interested in learning more about who I am, how I think, what I've done and like to do.
 
 # About Me
 
