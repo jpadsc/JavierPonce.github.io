@@ -173,8 +173,6 @@ Under the null $H_0 \fraq$
 
 something here
 
-where using $ \theta = \fraq{{S^2}_2025}{{S^2}_2020}$  v is
-
 $$ v = \fraq{(\theta + \fraq{2004965}{2198460})^2}{\fraq{\theta^2}{2004964} + \fraq{2004965^2}{2198460^2 (2198459)}} $$.
 
 Therefore, we reject the null at the significance level $\alpha = 0.05$ if $t \leq T_{\alpha,v}$.
