@@ -6,7 +6,7 @@ Ideally, when you want to test a causal effect like the one I described in the a
 
 ## The parameters of interest and the Data.
 
-Before running any tests, let me define the parameters of interest and explain how we can use the data from the yearly SAT reports to test the defined parameters. I’ll define $\mu_x$ to be the average math SAT score obtained by high school students who want to attend college in the near future during the school cycle $x$ in the hypothetical case where all of them took the test. Similarly, define $\sigma_x$ to be the standard deviation of the math SAT scores obtained by high school students who want to attend college in the near future during the school cycle $x$ in the hypothetical case where all of them took the test. For simplicity, let each school cycle be represented by the latter year of each cycle, meaning that $\mu_{2025}$ represents the true average score of all students who want to attend college in the 2025-2024 cycle if we were to test all of these students. Under these definitions, we are interested in testing the hypothesis that  $\mu_x < \mu_y$, where $x$ represents a school cycle after the COVID lockdown and $y$ the one before it. 
+Before running any tests, let me define the parameters of interest and explain how we can use the data from the yearly SAT reports to test the defined parameters. I’ll define $\mu_x$ to be the average math SAT score obtained by high school students who want to attend college in the near future during the school cycle $x$ in the hypothetical case where all of them took the test. Similarly, define $\sigma_x$ to be the standard deviation of the math SAT scores obtained by high school students who want to attend college in the near future during the school cycle $x$ in the hypothetical case where all of them took the test. For simplicity, let each school cycle be represented by the most recent year of each cycle, meaning that $\mu_{2025}$ represents the true average score of all students who want to attend college in the 2025-2024 cycle if we were to test all of these students. Under these definitions, we are interested in testing the hypothesis that  $\mu_x < \mu_y$, where $x$ represents a school cycle after the COVID lockdown and $y$ the one before it. 
 
 Since not all students attempting to attend college in each school cycle take the SAT, the data from the SAT yearly reports are from a sample of our population of interest. Now, using the data from our sample, we can run statistical tests to make inferences about our parameters of interest. There’s just one problem. If you are familiar with statistics, you are probably concerned that our sample of students who took the SAT isn’t random, but instead the majority self-select to take or not take the test. Then how can I run meaningful tests on this data?
 
@@ -74,41 +74,111 @@ equal_var_test <- function(S_x, n, S_y, m, alpha){
 
 $$H_0 : \sigma_{2025} = \sigma_{2020} \quad ; \quad H_1: \sigma_{2025} \neq \sigma_{2020}$$
 
-$$ f = \frac{S_{2020}^2}{S_{2025}^2} \sim F_{2198459,2004964}$$
+Under the null hypothesis $H_0$
+
+$$ f = \frac{S_{2020}^2}{S_{2025}^2} \sim F_{2198459,2004964}$$.
 
 Where $S_x$ represents the unbiased estimator of the standart deviation for cycle $x$.
 
-Using the values from the SAT report and the table above we get
+Then, after computing f with the values from the data, we reject the null at the significance level $\alpha = 0.05$ if either (1) $f \leq F_{\frac{\alpha}{2},2198459,2004964}$ or (2) $ f \geq F_{1 - \frac{\alpha}{2},2198459,2004964}$.
 
-$$ f = 0.8622449 < F_{0.025,2198459,2004964} = 0.9980453 < F_{0.975,2198459,2004964} = 1.00196 $$
+Using my function and the values from the report, we get that 
+
+$$ f = 0.8622449 < F_{0.025,2198459,2004964} = 0.9980453 < F_{0.975,2198459,2004964} = 1.00196 $$.
 
 Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
+
+Function's output:
+```
+> equal_var_test(S_2025, n_2025, S_2020, n_2020, 0.05)
+f is : 0.8622449 F_l: 0.9980453 F_u 1.00196 
+[1] "reject the null"
+```
 
 #### Testing $\sigma_{2024} \neq \sigma_{2020}$
 
 $$H_0 : \sigma_{2024} = \sigma_{2020} \quad ; \quad H_1: \sigma_{2024} \neq \sigma_{2020}$$
 
-$$ f = \frac{S_{2020}^2}{S_{2024}^2} \sim F_{2198459,1973890}$$
+Under the null hypothesis $H_0$
 
-Using the values from the SAT report we get
+$$ f = \frac{S_{2020}^2}{S_{2024}^2} \sim F_{2198459,1973890}$$.
 
-$$ f = 0.876096 < F_{0.025,2198459,1973890} = 0.99803 < F_{0.975,2198459,1973890} = 1.001976 $$
+Therefore, we reject the null at the significance level $\alpha = 0.05$ if either (1) $f \leq F_{\frac{\alpha}{2},2198459,1973890}$ or (2) $ f \geq F_{1 - \frac{\alpha}{2},2198459,1973890}$.
+
+Using my function and the values from the report, we get that
+
+$$ f = 0.876096 < F_{0.025,2198459,1973890} = 0.99803 < F_{0.975,2198459,1973890} = 1.001976 $$.
 
 Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
+
+Function's output:
+```
+> equal_var_test(S_2024, n_2024, S_2020, n_2020, 0.05)
+f is : 0.876096 F_l: 0.99803 F_u 1.001976 
+[1] "reject the null"
+```
 
 #### Testing $\sigma_{2023} \neq \sigma_{2020}$
 
 $$H_0 : \sigma_{2023} = \sigma_{2020} \quad ; \quad H_1: \sigma_{2023} \neq \sigma_{2020}$$
 
-$$ f = \frac{S_{2020}^2}{S_{2023}^2} \sim F_{2198459,1913741}$$
+Under the null hypothesis $H_0$
 
-Using the values from the SAT report we get
+$$ f = \frac{S_{2020}^2}{S_{2023}^2} \sim F_{2198459,1913741}$$.
 
-$$ f = 0.9197124 < F_{0.025,2198459,1913741} = 0.9979994 < F_{0.975,2198459,1913741} = 1.002007 $$
+Therefore, we reject the null at the significance level $\alpha = 0.05$ if either (1) $f \leq F_{\frac{\alpha}{2},2198459,1913741}$ or (2) $ f \geq F_{1 - \frac{\alpha}{2},2198459,1913741}$.
+
+Using my function and the values from the report, we get that
+
+$$ f = 0.9197124 < F_{0.025,2198459,1913741} = 0.9979994 < F_{0.975,2198459,1913741} = 1.002007 $$.
 
 Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
+
+Function's output:
+```
+> equal_var_test(S_2023, n_2023, S_2020, n_2020, 0.05)
+f is : 0.9197124 F_l: 0.9979994 F_u 1.002007 
+[1] "reject the null"
+```
 
 #### Conclusion of the tests.
 
 According to the F tests, none of the pairs share variance. Thus, I will use Welch’s approximation to run the two-population mean t-tests.
 
+### Two-Sample mean t-tests.
+
+Finally, we get to test my original hypothesis $H_1 : \mu_x < \mu_y$ against the null $H_0 : \mu_x = \mu_y$. As concluded in the previous section, I won’t assume equal variances, so I’ll have to approximate the degrees of freedom using Welch’s approximation. Once again, I’ll be using an R function I wrote to run the two-sample t-test.
+
+My function:
+```
+lower_mean_t_test <- function(X_bar, n, S_x, Y_bar, m, S_y, alpha){
+  t <- (X_bar - Y_bar)/( ( ((S_x^2)/n)+((S_y^2)/m) )^(1/2) )
+  theta <- (S_x^2)/(S_y^2)
+  v <- ((theta + (n/m))^2)/( ((theta^2)/(n-1)) + (((n/m)^2)/(m-1)) )
+  p_value <- pt(t, round(v))
+  cat("t_stat:", t, ", v:", round(v),", cutoff", qt(alpha, round(v)), ", pvalue:", p_value, "\n")
+  if(p_value <= alpha){
+    return("reject the null, mean x is significantlly smaller than mean y")
+  } else{
+    return("fail to reject the null")
+  }
+}
+```
+
+#### Testing $\mu_{2025} < \mu_{2020}$.
+
+$$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$
+
+Under the null $H_0$
+
+$$ t = \faq{\bar{X}_2025 - \bar{X}_2020}{\sqrt{\frac{{S^2}_2025}{2004965} + \frac{{S^2}_2020}{2198460}}} \sim T_v $$
+
+where using $ \theta = \fraq{{S^2}_2025}{{S^2}_2020}$
+
+$$ v = \fraq{(\theta + \fraq{2004965}{2198460})^2}{\fraq{\theta^2}{2004964} + \fraq{2004965^2}{2198460^2 (2198459)}} $$.
+
+Therefore, we reject the null at the significance level $\alpha = 0.05$ if $t \leq T_{\alpha,v}$.
+
+Using my function and the values from the report, we get that
+
+$$ t = -126.1218, v = 4090955 ; t < T_{0.05,v} = -1.644854 $$
