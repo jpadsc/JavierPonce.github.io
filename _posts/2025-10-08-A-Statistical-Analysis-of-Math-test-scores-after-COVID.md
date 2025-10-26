@@ -167,13 +167,13 @@ lower_mean_t_test <- function(X_bar, n, S_x, Y_bar, m, S_y, alpha){
 
 #### Testing $\mu_{2025} < \mu_{2020}$.
 
-$$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$
+$$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$.
 
-Under the null $H_0 \fraq$
+Under the null $H_0$
 
 something here
 
-$$ v = \fraq{(\theta + \fraq{2004965}{2198460})^2}{\fraq{\theta^2}{2004964} + \fraq{2004965^2}{2198460^2 (2198459)}} $$.
+$$ v = \frac{(\theta + \frac{2004965}{2198460})^2}{\frac{\theta^2}{2004964} + \frac{2004965^2}{2198460^2 (2198459)}} $$.
 
 Therefore, we reject the null at the significance level $\alpha = 0.05$ if $t \leq T_{\alpha,v}$.
 
