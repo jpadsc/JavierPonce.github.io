@@ -45,4 +45,11 @@ In order to run tests, you also need to have information about the type of distr
 
 ## Time to test the test.
 
+As I am interested in testing the hypothesis $H_1 : \mu_x < \mu_y$ against the null $H_0 : \mu_x = \mu_y$, I will do a two-population t-test using the data from the table in the previous section. Before starting the test, I need to decide whether it is reasonable to assume equal variance or if I’ll use Welch’s approximation to continue forward. Thus, I’ll start with an equal variance F-test for every cycle after the COVID pandemic compared to the cycle immediately before it.
+
+### F-tests for equal variance
+
+Normally, I would run these tests using built-in functions from Python, but most of these require access to all data, which I don’t have. Instead, I’ll use fucntions I wrote in R to use whenever I deal with summarized data.
+
+#### Testing $\sigma_{2025} \neq \sigma_{2020}$
 
