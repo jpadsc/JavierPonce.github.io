@@ -169,9 +169,9 @@ lower_mean_t_test <- function(X_bar, n, S_x, Y_bar, m, S_y, alpha){
 
 $$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$
 
-Under the null $H_0$
+Under the null $H_0 \fraq$
 
-$$ t = \fraq{\bar{X}_2025 - \bar{X}_2020}{\sqrt{\frac{{S^2}_2025}{2004965} + \frac{{S^2}_2020}{2198460}}} \sim T_v $$
+something here
 
 where using $ \theta = \fraq{{S^2}_2025}{{S^2}_2020}$  v is
 
