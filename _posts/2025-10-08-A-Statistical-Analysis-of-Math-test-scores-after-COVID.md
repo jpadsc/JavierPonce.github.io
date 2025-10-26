@@ -239,3 +239,10 @@ t_stat: -126.7547 , v: 3982576 , cutoff -1.644854 , pvalue: 0
 [1] "reject the null, mean x is significantlly smaller than mean y"
 ```
 
+## Test results and conclusion.
+
+All of the two-sample t-tests rejected the null hypothesis in favor of the alternative, meaning that, for the three most recent  school cycles, the average math SAT scores obtained by high school students who want to attend college in the near future during each of those school cycles are significantly lower than the scores prior to the COVID-19 pandemic. As I mentioned at the beginning, these tests do not prove any sort of causality, so we can’t say anything about the theories that I started this analysis with. Instead, the value of this analysis lies in the fact that we now know something changed between the pre-COVID and post-COVID times to cause such an effect. Knowing this, we can then look for data or perhaps start experiments that create the necessary data to test different theories. 
+
+### If you are wondering about the during-COVID school cycles
+
+Lastly, I want to explain why I left the during-COVID school cycles out of this analysis. The COVID time is not similar to either the post-COVID time or the pre-COVID time, and the main problem with this is that a lot of the assumptions I comfortably made about the pre-COVID and post-COVID times, I just can’t make about the COVID time. Without these assumptions, I need a completely different approach to study the data from those years. Originally, I planned to write another section here about the data from the COVID years, but since this analysis is already longer than expected, I’ll write about the data from the COVID years in a different post. There’s a very interesting shift in these years, and I encourage you to look for that post on this website in case it's already published. Thank you for reading this post.

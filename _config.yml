@@ -26,7 +26,7 @@ repository               : "jpadsc/JavierPonce.github.io"
 #teaser                   : /assets/images/Geisel-5-L.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 185
+words_per_minute         : 190
 enable_copy_code_button  : true
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
