@@ -165,9 +165,9 @@ $$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$.
 
 Under the null $H_0$
 
-$$ t = \frac{\bar{X}_2025 - \bar{X}_2020 }{\sqrt{ \frac{{S_2025}^2}{2004965} + \frac{{S_2020}^2}{2198460} }} \sim T_v $$.
+$$ t = \frac{\bar{X}_2025 - \bar{X}_2020 }{\sqrt{ \frac{S_{2025}^2}{2004965} + \frac{S_{2020}^2}{2198460} }} \sim T_v $$.
 
-Where using $ \theta = \frac{{S_2025}^2}{{S_2020}^2} $, v is
+Where using $ \theta = \frac{S_{2025}^2}{S_{2020}^2} $, v is
 
 $$ v = \frac{(\theta + \frac{2004965}{2198460})^2}{\frac{\theta^2}{2004964} + \frac{2004965^2}{2198460^2 (2198459)}} $$.
 
