@@ -53,22 +53,22 @@ Normally, I would run these tests using built-in functions from Python, but most
 
 This is my personalized function for the following F-tests. 
 
-```
-equal_var_test <- function(S_x, n, S_y, m, alpha){
-  f <- (S_y^2)/(S_x^2)
-  F_l <- qf( (alpha/2), (m-1), (n-1) )
-  F_u <- qf( (alpha/2), (m-1), (n-1), lower.tail = FALSE)
-  cat("f is :", f, "F_l:", F_l, "F_u", F_u, "\n")
-  if( f <= F_l ) {
-      return("reject the null")
-  } else if(f >= F_u){
-    return("reject the null")
-  } else{
-    return("fail to reject the null")
-  }
-  
-}
-```
+
+            equal_var_test <- function(S_x, n, S_y, m, alpha){
+            f <- (S_y^2)/(S_x^2)
+            F_l <- qf( (alpha/2), (m-1), (n-1) )
+            F_u <- qf( (alpha/2), (m-1), (n-1), lower.tail = FALSE)
+            cat("f is :", f, "F_l:", F_l, "F_u", F_u, "\n")
+            if( f <= F_l ) {
+                return("reject the null")
+            } else if(f >= F_u){
+                return("reject the null")
+            } else{
+                return("fail to reject the null")
+            }
+            
+            }
+
 
 #### Testing $\sigma_{2025} \neq \sigma_{2020}$
 
