@@ -6,7 +6,7 @@ Ideally, when you want to test a causal effect like the one I described in the a
 
 ## The parameters of interest and the Data.
 
-Before running any tests, let me define the parameters of interest and explain how we can use the data from the yearly SAT reports to test the defined parameters. I’ll define $\mu_x$ to be the average math SAT score obtained by high school students who want to attend college in the near future during the school cycle $x$ in the hypothetical case where all of them took the test. For simplicity, let each school cycle be represented by the latter year of each cycle, meaning that $\mu_{2025}$ represents the true average score of all students who want to attend college in the 2025-2024 cycle if we were to test all of these students. Under these definitions, we are interested in testing the hypothesis that  $\mu_x < \mu_y$, where $x$ represents a school cycle after the COVID lockdown and $y$ the one before it. 
+Before running any tests, let me define the parameters of interest and explain how we can use the data from the yearly SAT reports to test the defined parameters. I’ll define $\mu_x$ to be the average math SAT score obtained by high school students who want to attend college in the near future during the school cycle $x$ in the hypothetical case where all of them took the test. Similarly, define $\sigma_x$ to be the standard deviation of the math SAT scores obtained by high school students who want to attend college in the near future during the school cycle $x$ in the hypothetical case where all of them took the test. For simplicity, let each school cycle be represented by the latter year of each cycle, meaning that $\mu_{2025}$ represents the true average score of all students who want to attend college in the 2025-2024 cycle if we were to test all of these students. Under these definitions, we are interested in testing the hypothesis that  $\mu_x < \mu_y$, where $x$ represents a school cycle after the COVID lockdown and $y$ the one before it. 
 
 Since not all students attempting to attend college in each school cycle take the SAT, the data from the SAT yearly reports are from a sample of our population of interest. Now, using the data from our sample, we can run statistical tests to make inferences about our parameters of interest. There’s just one problem. If you are familiar with statistics, you are probably concerned that our sample of students who took the SAT isn’t random, but instead the majority self-select to take or not take the test. Then how can I run meaningful tests on this data?
 
@@ -49,7 +49,28 @@ As I am interested in testing the hypothesis $H_1 : \mu_x < \mu_y$ against the n
 
 ### F-tests for equal variance
 
-Normally, I would run these tests using built-in functions from Python, but most of these require access to all data, which I don’t have. Instead, I’ll use fucntions I wrote in R to use whenever I deal with summarized data.
+Normally, I would run these tests using built-in functions from Python, but most of these require access to all data, which I don’t have. Instead, for all the tests in this analysis, I’ll use fucntions I wrote in R to use whenever I deal with summarized data.
+
+This is my personalized function for the following F-tests. 
+
+```
+equal_var_test <- function(S_x, n, S_y, m, alpha){
+  f <- (S_y^2)/(S_x^2)
+  F_l <- qf( (alpha/2), (m-1), (n-1) )
+  F_u <- qf( (alpha/2), (m-1), (n-1), lower.tail = FALSE)
+  cat("f is :", f, "F_l:", F_l, "F_u", F_u, "\n")
+  if( f <= F_l ) {
+      return("reject the null")
+  } else if(f >= F_u){
+    return("reject the null")
+  } else{
+    return("fail to reject the null")
+  }
+  
+}
+```
 
 #### Testing $\sigma_{2025} \neq \sigma_{2020}$
+
+$$H_0 : \sigma_{2025} = \sigma_{2020} ; H_1: \sigma_{2025} \neq \sigma_{2020}$$
 
