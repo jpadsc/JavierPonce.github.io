@@ -82,9 +82,7 @@ Where $S_x$ represents the unbiased estimator of the standart deviation for cycl
 
 Then, after computing f with the values from the data, we reject the null at the significance level $\alpha = 0.05$ if either (1) $f \leq F_{\frac{\alpha}{2},2198459,2004964}$ or (2) $ f \geq F_{1 - \frac{\alpha}{2},2198459,2004964}$.
 
-Using my function and the values from the report, we get that 
-
-$$ f = 0.8622449 < F_{0.025,2198459,2004964} = 0.9980453 < F_{0.975,2198459,2004964} = 1.00196 $$.
+Using my function and the values from the report, we get that $ f = 0.8622449 < F_{0.025,2198459,2004964} = 0.9980453 < F_{0.975,2198459,2004964} = 1.00196 $.
 
 Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
 
@@ -105,9 +103,7 @@ $$ f = \frac{S_{2020}^2}{S_{2024}^2} \sim F_{2198459,1973890}$$.
 
 Therefore, we reject the null at the significance level $\alpha = 0.05$ if either (1) $f \leq F_{\frac{\alpha}{2},2198459,1973890}$ or (2) $ f \geq F_{1 - \frac{\alpha}{2},2198459,1973890}$.
 
-Using my function and the values from the report, we get that
-
-$$ f = 0.876096 < F_{0.025,2198459,1973890} = 0.99803 < F_{0.975,2198459,1973890} = 1.001976 $$.
+Using my function and the values from the report, we get that $ f = 0.876096 < F_{0.025,2198459,1973890} = 0.99803 < F_{0.975,2198459,1973890} = 1.001976 $.
 
 Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
 
@@ -128,9 +124,7 @@ $$ f = \frac{S_{2020}^2}{S_{2023}^2} \sim F_{2198459,1913741}$$.
 
 Therefore, we reject the null at the significance level $\alpha = 0.05$ if either (1) $f \leq F_{\frac{\alpha}{2},2198459,1913741}$ or (2) $ f \geq F_{1 - \frac{\alpha}{2},2198459,1913741}$.
 
-Using my function and the values from the report, we get that
-
-$$ f = 0.9197124 < F_{0.025,2198459,1913741} = 0.9979994 < F_{0.975,2198459,1913741} = 1.002007 $$.
+Using my function and the values from the report, we get that $ f = 0.9197124 < F_{0.025,2198459,1913741} = 0.9979994 < F_{0.975,2198459,1913741} = 1.002007 $.
 
 Therefore, the test rejects the null hypothesis meaning I should use Welch's approximation for the two population mean test.
 
@@ -171,7 +165,9 @@ $$ H_0 : \mu_{2025} = \mu_{2020} \quad ; \quad H_1 : \mu_{2025} < \mu_{2020} $$.
 
 Under the null $H_0$
 
-something here
+$$ t = \frac{\bar{X}_2025 - \bar{X}_2020 }{\sqrt{ \frac{{S_2025}^2}{2004965} + \frac{{S_2020}^2}{2198460} }} \sim T_v $$.
+
+Where using $ \theta = \frac{{S_2025}^2}{{S_2020}^2} $, v is
 
 $$ v = \frac{(\theta + \frac{2004965}{2198460})^2}{\frac{\theta^2}{2004964} + \frac{2004965^2}{2198460^2 (2198459)}} $$.
 
