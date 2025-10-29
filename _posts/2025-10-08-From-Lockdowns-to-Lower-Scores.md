@@ -4,7 +4,7 @@ toc_label: "Table of Contents"
 toc_sticky: true
 ---
 
-## Did COVID make students attempting to go to college worse at math?
+## A Statistical Analysis Of Math SAT Scores After Covid.
 
 As a student who experienced the online classes era during COVID, I believe that online schooling significantly decreased learning among all students, especially in abstract subjects like mathematics. Similarly, during my years as a Mathematics and Data Science tutor at UCSD, I found that many students struggled due to a lack of understanding of fundamental concepts they had studied during the COVID pandemic. Driven by this belief, I started looking for relevant data to run statistical tests on.
 
