@@ -37,7 +37,13 @@ Hopefully, my arguments help you understand why I think it is reasonable to take
 
 ### Is that normal?
 
-In order to run tests, you also need to have information about the type of distribution your data is coming from. Ideally, if you have access to all the data, you can use the data to infer the distribution of the data. For example, if I wanted to show the distribution is approximately normal, I would create a Q-Q plot or use the Kolmogorov-Smirnov test. Unfortunately, I don’t have access to the complete sample, but only the reported summary. Thankfully, it is a popular assumption to consider SAT scores to be approximately normal, so for the rest of this analysis, I’ll assume that the samples come from a normal distribution with unknown parameters $\mu$ and $\sigma$.  
+In order to run tests, you also need to have information about the type of distribution your data is coming from. Ideally, if you have access to all the data, you can use the data to infer the distribution of the data. For example, if I wanted to show the distribution is approximately normal, I would create a Q-Q plot or use the Kolmogorov-Smirnov test. Unfortunately, I don’t have access to the complete sample, but only the reported summary. Thankfully, it is a popular assumption to consider SAT scores to be approximately normal, so for the rest of this analysis, I’ll assume that the samples come from a normal distribution with unknown parameters $\mu$ and $\sigma$.
+
+### Independence between samples.
+
+Lastly, I need to check that the pairs of samples I test are independent of each other. While there’s no explicit dependence between the SAT scores from one year to another, there is an argument for samples from years close to each other to have some dependence. Students are allowed to retake the SAT, so different samples may share a significant number of students, causing dependence between the samples. Fortunately, most students don’t spend more than a year taking the SAT. Thus, when comparing the after-COVID school cycles (2025-2024, 2024-2023, and 2023-2022) with the 2020-2019 cycle, it is safe to assume that these share very few to no students. 
+
+**Note:** *Remember that I am comparing each after-COVID cycle with the 2020-2019 cycle, and while the after-COVID cycles might share students with one another due to the proximity of the years, this doesn’t affect the tests that I’ll perform.*   
 
 ### Table summary of the data.
 
