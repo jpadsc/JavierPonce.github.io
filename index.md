@@ -7,11 +7,11 @@ header:
 title: About this website
 ---
 
-Hello! As you probably already figured out, my name is Javier Ponce, and I made this website for anyone interested in learning more about who I am, how I think, and what I like to do. Hopefully, you are reading this because you are a prospective friend or an interested Employer. In either case, I encourage you to connect with me via LinkedIn or email.
+Hello! As you probably already figured out, my name is Javier Ponce, and I made this website for anyone interested in learning more about who I am, how I think, and what I like to do. Hopefully, you are reading this because you are a prospective friend or an interested Employer. In either case, I encourage you to connect with me via LinkedIn or email. On this website, you  will find posts where I answer a question or solve a problem using my knowledge in mathematics, but don’t be surprised if, occasionally, I post something different. The website is still in its early stages, and I am actively working on interesting posts. 
 
 # About Me
 
-I consider myself a creative, passionate, and curious mind fascinated by Mathematics and how to understand stochastic processes. I just Graduated from the University of California San Diego with a double major, one in Probability & Statistics the other in Economics with the addition of a Data Science Minor. Now I am looking for opportunities outside Academia to apply what I've learned and pursue my passion for Mathematics.   
+I consider myself a creative, passionate, and curious mind fascinated by Mathematics and how to understand stochastic processes. I just graduated from the University of California, San Diego with a double major. One major in Probability & Statistics, the other in Economics, with the addition of a Data Science Minor. Now I am looking for opportunities outside Academia to apply what I've learned and pursue my passion for Mathematics.  
 
 <!-- While I enjoy learning about abstract Mathematics, my creative mind impels me to merge what I observe with the mathematical principles I know. The other day, after spending a lot of time with my dog Leia, I noticed that she has four moods: resting, eating, playing, and going outside (equivalent to going to the restroom). Since I wish to predict when Leia might want to go outside, I wondered if I could define a <a href="https://en.wikipedia.org/wiki/Continuous_stochastic_process" target="_blank"> continous-time stochastic process</a> that accurately describes Leia's behavior and use it to predict if Leia wants to go outside at any given time of the day. Hopefully, you can see that I enjoy formulating and solving questions that merge my reality with Mathematics, which pushes me to use my education and experience to seek a living out of it. 
 
