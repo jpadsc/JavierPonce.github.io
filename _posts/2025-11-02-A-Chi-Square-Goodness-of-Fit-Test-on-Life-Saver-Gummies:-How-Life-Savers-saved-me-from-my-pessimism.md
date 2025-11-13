@@ -34,4 +34,4 @@ After deciding to run these statistical tests, my first hypothesis was that all 
 $H_0 : p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$ ; $ H_1: p_i \neq p_j$ for some i and j.
 
 Under the null
-$d = \sum_{i \in flavors} \frac{(k_i - np_{i0})^2}{np_{i0}} \sim \chi_4$
+$d = \sum_{i \in flavors} \frac{(k_i - np_{i0})^2}{np_{i0}} \sim \chi_4^2$
