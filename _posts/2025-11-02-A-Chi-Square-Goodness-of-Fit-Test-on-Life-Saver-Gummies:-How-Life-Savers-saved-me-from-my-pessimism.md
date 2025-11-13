@@ -24,3 +24,14 @@ After separating and counting all the gummies of each flavor by hand, I organize
 |Both  | 23   | 16    | 16        | 36    | 9         |
 
 Now let's use the data to make inferences about the population parameters.
+
+## Not all the flavors are made equal.
+
+After deciding to run these statistical tests, my first hypothesis was that all gummy flavors appeared in equal proportions and that my brain exaggerated the amount of watermelon Life Savers I encountered. Formally, my hypothesis was that $p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$. Since our data comes from a multinomial distribution, we can use an approximation to perform a chi-square goodness-of-fit test to test such a hypothesis. Still, as in most cases where you plan to use an approximation, you need to check that such an approximation is relevant to your specific case. In this case, we need $np_{i0} \geq 5$ for all i, where $p_{i0}$ is the proportion of  "i" flavored Life Savers under the null hypothesis. The null hypothesis in this case is $H_0 : p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$, thus $ n \geq 25$. Since we have a sample of 100 gummies, it is sound for us to use the approximation. 
+
+### Testing $p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$
+
+$H_0 : p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$ ; $ H_1: p_i \neq p_j$ for some i and j.
+
+Under the null
+$d = \sum_{i \in flavors} \frac{(k_i - np_{i0})^2}{np_{i0}} \sim \chi_4$
