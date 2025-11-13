@@ -13,7 +13,7 @@ Contrary to what the AI-generated header image depicts, the Life Savers gummies 
 
 ### The sweet data.
 
-![separated gummies](/assets/images/gummies.jpeg)
+![separated gummies](../assets/images/gummies.jpeg)
 
 After separating and counting all the gummies of each flavor by hand, I organized the data in the following table.
 
