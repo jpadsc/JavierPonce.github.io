@@ -32,7 +32,7 @@ Now let's use the data to make inferences about the population parameters.
 
 After deciding to run these statistical tests, my first hypothesis was that all gummy flavors appeared in equal proportions and that my brain exaggerated the amount of watermelon Life Savers I encountered. Formally, my hypothesis was that $p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$. Since our data comes from a multinomial distribution, we can use an approximation to perform a chi-square goodness-of-fit test to test such a hypothesis. Still, as in most cases where you plan to use an approximation, you need to check that such an approximation is relevant to your specific case. In this case, we need $np_{i0} \geq 5$ for all i, where $p_{i0}$ is the proportion of  "i" flavored Life Savers under the null hypothesis. The null hypothesis in this case is $H_0 : p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$, thus $ n \geq 25$. Since we have a sample of 100 gummies, it is sound for us to use the approximation. 
 
-### Testing $p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$
+### Testing $p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$.
 
 $H_0 : p_{C} = p_{S} = p_{A} = p_{W} = p_{O} = \frac{1}{5}$ ; $ H_1: p_i \neq p_j$ for some i and j.
 
@@ -45,9 +45,43 @@ Using the SciPy Python library, we get that $d = 20.9$, and that the correspondi
 
 This test result came as a huge surprise. Firstly, because I never imagined that Mars (the company that produces Life Savers) would find a reason to focus production on some flavor more than others, but even more surprising, because assuming that the null hypothesis is wrong implies some flavor (or group of flavors) represents significantly less than $\frac{1}{5}$ of all produced gummies, and looking at the data I now believe that's the case for Watermelon Life Savers, contrdicting my original motivating tought. Driven by this implication, I'll now test if the proportion of Watermelon Life Savers is significantly lower than $\frac{1}{5}$, using a significance level of $\alpha = 0.05$, and I will also find a confidence interval for the value of this proportion.
 
-### Testing $p_W < \frac{1}{5}$
+## Exploring the Watermelon distribution.
 
 While the data on how many gummies come from each flavor comes from a multinomial distribution, you may recall that each component of a multinomial is a binomial distribution. Thus, the number of Watermelon Life Savers in our sample comes from a Binomial$(100, p_W)$, and we can use this to do inference about $p_W$.
 
-When testing a hypothesis about the parameter $p$ of a binomial random variable, I would use a normal approximation of the binomial. Using such an approximation is extremely helpful because it drastically reduces the necessary computational work, without destroying the test's accuracy. Thankfully, SciPy comes with the function binomtest(), which can perform this hypothesis test using the exact probability mass function of a binomial random variable. Since our sample is relatively small, running binomtest() shouldn't be a problem for my computer, and it is a way to perform the hypothesis test without compromising any of the test's accuracy.
+When testing a hypothesis about the parameter $p$ of a binomial random variable, I would use a normal approximation of the binomial. Using such an approximation is extremely helpful because it drastically reduces the necessary computational work, without destroying the test's accuracy. Thankfully, SciPy comes with the function binomtest(), which can perform this hypothesis test using the exact probability mass function of a binomial random variable. Since our sample is relatively small, running binomtest() shouldn't be a problem for my computer, and it is a way to perform the hypothesis test without compromising any of the test's accuracy. Now, let's run the hypothesis test using binomtest().
 
+### Testing $p_W < \frac{1}{5}$.
+
+$H_0: p_W = \frac{1}{5} $ ; $H_1: p_W < \frac{1}{5}$
+
+Under the null
+$K_w \sim Binom(100, \frac{1}{5})$ , where $K_w$ is the number of Watermelon Life Savers from the sample.
+
+Thus we reject the null at the significance level $\alpha = 0.05$ if 
+$P(Binom(100, \frac{1}{5}) \leq 9) \leq \alpha$.
+
+Using python we get that
+$P(Binom(100, \frac{1}{5}) \leq 9) = 0.0023335$.
+Therefore, we reject the null, meaning that the data suggest that watermelon-flavored Life Savers appear at a significantly lower rate than $\frac{1}{5}$.
+
+### 95% Confidence Interval for $p_W$.
+
+Now that we have enough evidence to believe that $p_W < \frac{1}{5} $, I am interested in estimating $p_W$. While the maximum likelihood estimate is $0.09$ a more useful piece of information would be a 95% confidence interval, which we can easily get with binomtest().proportion_ci().
+
+After running the code, we are 95% confident that $p_W \in (0, 0.15179)$. Again, these results are the complete opposite of what I perceived while consuming these gummies, leaving me astonished.
+
+## Tampered bags.
+
+So far, I've been assuming that each bag represents a random sample of the population of Life Saver gummies, which is why I've been able to consider the two bags as just one bigger sample. Making such an assumption is natural, but as a last resort to validate my original perception of $p_W$, I'll consider the possibility that my assumption wasn't sound. Perhaps during the packaging process, there's an individual in charge of deciding how to build a bag of gummies, and this individual deliberately chooses to make bags with significantly different flavor distribution. Therefore, in this last section, I'll test if the two bags I bought come from the same distribution. In other words, I will test independence between the events $F_i$ and $B_j$, where $F_i$ is the event of a gummy being of flavor $i$, and $B_j$ represents a gummy coming from bag $j$. 
+
+### Testing indepence for $F_i$ and $B_j$.
+
+This test is essentially a goodness of fit test with estimated parameters.
+
+$H_0: F_i \mathpalette B_j$ ; $H1: F_i and B_j$ are dependent.
+
+Under the null
+$ d_2 = \sum_{i \in flavors} \sum_{j=1}^2 \frac{ ( k_{ij} - 50\hat{p}_i)^2 }{50\hat{p}_i} \sim \chi_4^2 $
+
+where $k_{ij}$ is the number of elements in $F_i \cap B_j$, and  $\hat{p}_i$ is the maximum likelihood estimate of $P(F_i)$.
