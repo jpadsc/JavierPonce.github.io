@@ -79,7 +79,7 @@ So far, I've been assuming that each bag represents a random sample of the popul
 
 This test is essentially a goodness of fit test with estimated parameters.
 
-$H_0: F_i \rlap B_j$ ; $H1: F_i and B_j$ are dependent.
+$H_0: F_i$ and  $B_j$ are independent ; $H1: F_i$ and $B_j$ are dependent.
 
 Under the null
 $ d_2 = \sum_{i \in flavors} \sum_{j=1}^2 \frac{ ( k_{ij} - 50\hat{p}_i)^2 }{50\hat{p}_i} \sim \chi_4^2 $
