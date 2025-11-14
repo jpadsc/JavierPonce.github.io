@@ -3,6 +3,9 @@ header:
     image: /assets/images/lifesaversimage.png
     image_description: "life savers gummies"
 ---
+
+# How Life Savers saved me from my pessimism.
+
 ## No more watermelon sugar.
 
 I don't like watermelon. Naturally, I also dislike watermelon-flavored candy, but for some reason, whenever I enjoy a bag of Life Savers gummies, I feel as if the majority of the gummies I pull out of the bag are watermelon-flavored. This feeling made me wonder if the five flavors included in the bag appeared in equal proportions, and if watermelon-flavored gummies were as abundant as I perceived them to be. Thus, after finishing the bag that sparked all these questions in me, I ran to the store to buy more Life Savers to perform statistical tests on the samples from the new bags.
@@ -43,3 +46,8 @@ Using the SciPy Python library, we get that $d = 20.9$, and that the correspondi
 This test result came as a huge surprise. Firstly, because I never imagined that Mars (the company that produces Life Savers) would find a reason to focus production on some flavor more than others, but even more surprising, because assuming that the null hypothesis is wrong implies some flavor (or group of flavors) represents significantly less than $\frac{1}{5}$ of all produced gummies, and looking at the data I now believe that's the case for Watermelon Life Savers, contrdicting my original motivating tought. Driven by this implication, I'll now test if the proportion of Watermelon Life Savers is significantly lower than $\frac{1}{5}$, using a significance level of $\alpha = 0.05$, and I will also find a confidence interval for the value of this proportion.
 
 ### Testing $p_W < \frac{1}{5}$
+
+While the data on how many gummies come from each flavor comes from a multinomial distribution, you may recall that each component of a multinomial is a binomial distribution. Thus, the number of Watermelon Life Savers in our sample comes from a Binomial$(100, p_W)$, and we can use this to do inference about $p_W$.
+
+When testing a hypothesis about the parameter $p$ of a binomial random variable, I would use a normal approximation of the binomial. Using such an approximation is extremely helpful because it drastically reduces the necessary computational work, without destroying the test's accuracy. Thankfully, SciPy comes with the function binomtest(), which can perform this hypothesis test using the exact probability mass function of a binomial random variable. Since our sample is relatively small, running binomtest() shouldn't be a problem for my computer, and it is a way to perform the hypothesis test without compromising any of the test's accuracy.
+
