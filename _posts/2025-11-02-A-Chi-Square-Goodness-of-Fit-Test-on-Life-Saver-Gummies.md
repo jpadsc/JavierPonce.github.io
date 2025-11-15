@@ -85,3 +85,15 @@ Under the null
 $ d_2 = \sum_{i \in flavors} \sum_{j=1}^2 \frac{ ( k_{ij} - 50\hat{p}_i)^2 }{50\hat{p}_i} \sim \chi_4^2 $
 
 where $k_{ij}$ is the number of elements in $F_i \cap B_j$, and  $\hat{p}_i$ is the maximum likelihood estimate of $P(F_i)$.
+
+Thus, we reject the null at the significance level $\alpha = 0.05$ if $P(\chi_4^2 \geq d_2) \leq \alpha$.
+
+After computing the test in python, we get that $d_2 = 2.8925$ and $P(\chi_4^2 \geq d_2) = 0.57597 > \alpha$. Therefore, we fail to reject the null, meaning that the data from each bag of gummies is similar enough for us to believe that it comes from the same distribution. While this test only addresses the relation between the two bags I bought, it is reasonable to assume that other bags will follow the same distribution since they all pass through the same packaging process.
+
+## Final thoughts.
+
+Through this statistical analysis, I conclude that not all flavors of Life Savers gummies appear in equal amounts. After realizing that Mars produces smaller quantities of the Watermelon-flavored gummies, which I dislike, I now theorize that perhaps the popular flavors appear more often than the less popular ones. To test this theory, I would need a random sample of Life Savers consumers to rank these five flavors, which I don't have access to. Nevertheless, I find the implication that Mars has a reason to behave this way very interesting, and I wonder about the economic models they considered before making that decision. 
+
+Lastly, on a more personal note, my tests made me realize how pessimistic I can be at times. I perceived watermelon-flavored gummies to be the majority of the bunch just because of how much I dislike them, and I couldn't have been more wrong about that. Realizing how easy it is to exaggerate a bad experience encouraged me to be more positive and grateful for everything in my life. Perhaps it is because Thanksgiving is near, but I'd like to invite the reader to keep a positive mindset and look for things they are grateful for.
+
+Thank you for reading. If you are interested in reading the python notebook I created for all the computations in this post [click here](https://github.com/jpadsc/Chi_sq_Goodness_of_fit_test_on_life_savers/blob/main/tests.ipynb).
