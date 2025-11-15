@@ -2,6 +2,10 @@
 header:
     image: /assets/images/lifesaversimage.png
     image_description: "life savers gummies"
+
+toc: true
+toc_label: "Table of Contents"
+toc_sticky: true
 ---
 
 # How Life Savers saved me from my pessimism.
